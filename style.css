@@ -16,10 +16,11 @@ wrappeer {
 
 #top {
     width: 100%;
-    height: 1291px;
     background: #ffffff;
     position: relative;
+    overflow: hidden;
 }
+
 /*ヘッダー*/
 .head {
     width: 100%;
@@ -33,6 +34,7 @@ wrappeer {
     max-width: 100%;
     max-height: 100%;
 }
+
 /*ナビゲーション */
 nav {
     position: absolute;
@@ -59,6 +61,7 @@ nav a:hover {
     color: #FF5F85;
     transition: 0.5s;
 }
+
 /*top背景*/
 .main-visual {
 
@@ -69,6 +72,7 @@ nav a:hover {
     background-size: cover;
     overflow: hidden;
 }
+
 /*top画像*/
 .top-logo {
     position: absolute;
@@ -76,36 +80,173 @@ nav a:hover {
     left: 50%;
     transform: translateX(-50%);
 }
+
 .top-logo img {
     width: 850px;
 }
 
 /*天使*/
-.engel{
+.engel {
     position: absolute;
     bottom: 20%;
     left: 50%;
     transform: translateX(-50%);
 }
-.engel img{
+
+.engel img {
     width: 1300px;
 }
 
 /*ふわふわアニメーション*/
-.img_box{
-  animation: img_box_9955 3s ease-in-out infinite;
-  transform-origin: 50% 50%;
-  margin: 1rem 0 !important;
-}
- 
-@keyframes img_box_9955 {
-  0% { transform: translateY(0) }
-  50% { transform: translateY(-10px) }
-  100% { transform: translateY(0) }
+.img_box {
+    animation: img_box_9955 3s ease-in-out infinite;
+    transform-origin: 50% 50%;
+    margin: 1rem 0 !important;
 }
 
+@keyframes img_box_9955 {
+    0% {
+        transform: translateY(0)
+    }
+
+    50% {
+        transform: translateY(-10px)
+    }
+
+    100% {
+        transform: translateY(0)
+    }
+}
+
+/*切り替え波*/
+
+#top .wave{
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/*Aboutエリア*/
 #about {
     width: 100%;
-    height: 2367px;
+    height: 2300px;
     background: #FFEC60;
+    top: 96%;
+    position: absolute;
+    z-index: 3;
+    }
+.about-content{
+    margin: 0 auto;
+    width: 800px;
+    text-align: center;
 }
+/*About*/
+.about-content h5{
+    position: relative;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+}
+/*見出し装飾*/
+.about-content h5:before {
+  position: absolute;
+  bottom: -10px;
+  left: calc(50% - 30px);
+  width: 60px;
+  height: 5px;
+  content: '';
+  border-radius: 3px;
+  background: #000;
+}
+/*プロフィールタイトル*/
+.about-content h1{
+    position: relative;
+    text-align: center;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    padding: 5px;
+}
+/*プロフィール見出し装飾*/
+.about-content h1:before {
+  position: absolute;
+  bottom: -10px;
+  left: calc(50% - 30px);
+  width: 60px;
+  height: 5px;
+  content: '';
+  border-radius: 3px;
+  background: #000;
+}
+/*ぽんきちとは*/
+.aboutbox01{
+   padding: 2em 4em;
+    margin: 5em 0;
+    font-weight: bold;
+    color: #000000;/*文字色*/
+    background: #FFF;
+    border: solid 3px #000000;/*線*/
+    border-radius: 20px;/*角の丸み*/
+}
+.aboutbox01 h2{
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+.aboutbox01 p{
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: 300;
+    font-size: 23px;
+}
+/*画像*/
+.prof-img{
+    text-align: center;
+    margin-top: 50px;
+}
+.prof-img img{
+    width: 300px;    
+}
+/*プロフィールボックス*/
+.aboutbox02{
+  position: relative;
+  display: inline-block;
+  margin: 1em 0;
+  padding: 30px 60px;
+  color: #000;
+  font-size: 16px;
+  background: #FFF;
+  border: solid 3px #000;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+/*吹き出しの三角部分*/
+.aboutbox02:before {
+  content: "";
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  margin-left: -15px;
+  border: 12px solid transparent;
+  border-bottom: 12px solid #FFF;
+  z-index: 2;
+}
+.aboutbox02:after {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  margin-left: -17px;
+  border: 14px solid transparent;
+  border-bottom: 14px solid #000;
+  z-index: 1;
+}
+/*プロフィール文章*/
+.aboutbox02 p{
+    text-align: center;
+    color: #000000;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: 300;
+    font-size: 25px;
+}
+
