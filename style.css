@@ -1,0 +1,109 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'nav';
+    src: url(fonts/Corporate-Logo-Rounded.ttf);
+}
+
+wrappeer {
+    width: 1913px;
+    height: auto;
+}
+
+#top {
+    width: 100%;
+    height: 1291px;
+    background: #ffffff;
+    position: relative;
+}
+/*ヘッダー*/
+.head {
+    width: 100%;
+    height: 50px;
+    background: #ffffff;
+}
+
+.head img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+/*ナビゲーション */
+nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3;
+}
+
+nav li {
+    list-style-type: none;
+    float: left;
+    font-family: nav;
+}
+
+nav a {
+    font-size: 20px;
+    display: block;
+    text-decoration: none;
+    margin: 15px 25px 0px;
+    color: #333333;
+}
+
+nav a:hover {
+    color: #FF5F85;
+    transition: 0.5s;
+}
+/*top背景*/
+.main-visual {
+
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #fff url(img/top_back.png);
+    background-size: cover;
+}
+/*top画像*/
+.top-logo {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.top-logo img {
+    width: 850px;
+}
+
+/*天使*/
+.engel{
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.engel img{
+    width: 1300px;
+}
+
+/*ふわふわアニメーション*/
+.img_box{
+  animation: img_box_9955 3s ease-in-out infinite;
+  transform-origin: 50% 50%;
+  margin: 1rem 0 !important;
+}
+ 
+@keyframes img_box_9955 {
+  0% { transform: translateY(0) }
+  50% { transform: translateY(-10px) }
+  100% { transform: translateY(0) }
+}
+
+#about {
+    width: 100%;
+    height: 2367px;
+    background: #FFEC60;
+}

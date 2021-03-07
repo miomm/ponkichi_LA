@@ -1,0 +1,14 @@
+.img_box{
+  animation: img_box_9955 3s ease-in-out infinite;
+  transform-origin: 50% 50%;
+  margin: 1rem 0 !important;
+}
+ 
+@keyframes img_box_9955 {
+  0% { transform: translateY(0) }
+  50% { transform: translateY(-10px) }
+  100% { transform: translateY(0) }
+}
+.main-visual {
+    
+}
