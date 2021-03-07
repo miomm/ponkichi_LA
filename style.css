@@ -11,6 +11,7 @@
 wrappeer {
     width: 1913px;
     height: auto;
+    overflow: hidden;
 }
 
 #top {
@@ -66,6 +67,7 @@ nav a:hover {
     height: 100vh;
     background: #fff url(img/top_back.png);
     background-size: cover;
+    overflow: hidden;
 }
 /*top画像*/
 .top-logo {
