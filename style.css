@@ -129,7 +129,7 @@ nav a:hover {
 /*Aboutエリア*/
 #about {
     width: 100%;
-    height: 2300px;
+    height: 1500px;
     background: #FFEC60;
     top: 96%;
     position: absolute;
@@ -249,4 +249,24 @@ nav a:hover {
     font-weight: 300;
     font-size: 25px;
 }
+/*切り替え波*/
+#about .wave{
+    position: absolute;
+    bottom: -1%;
+    left: 55%;
+    transform: translateX(-50%);
+}
+
+/*voiceエリア*/
+#voice {
+    width: 100%;
+    height: 300px;
+    background: #fef7a7;
+    
+    position: absolute;
+   }
+
+
+
+
 
