@@ -267,50 +267,18 @@ h1:before {
     flex-wrap: wrap;
     margin: 0 auto;
     margin-top: 80px;
-    width: 980px;
+    width: 1000px;
 }
 
-/*ふせんの設定*/
-/*
-* {
- -webkit-box-sizing: border-box;
- -moz-box-sizing: border-box;
- box-sizing: border-box;
-}
- 
-::-moz-selection {
- background: #C6FF91;
- text-shadow: none;
-}
- 
-::selection {
- background: #C6FF91;
- text-shadow: none;
-}
- 
-.clearfix:before,
-.clearfix:after {
- content: " ";
- display: table;
-}
- 
-.clearfix:after {
- clear: both;
-}
- 
-.clearfix {
- *zoom: 1;
-}
-*/
- 
 /* Note styles */
-.note-wrap {
+.note-pink, .note-blue {
 /*  ふせんの大きさ  */
- width: 200px;
+ width: 240px;
  min-height: 150px;
 /*  内側の余白  */
- padding: 35px;
- margin: 0 22px 44px 22px;
+ padding: 25px;
+ padding-top: 40px;
+ margin: 0 26px 80px 2px;
  position: relative;
 /*  黒枠  */
  border: solid 4px #000000;
@@ -325,7 +293,7 @@ h1:before {
  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
 }
 /*マステ部分*/
-.note-wrap:before {
+.note-blue:before {
  display: block;
  content: "";
  background: rgba(95, 228, 255, 0.8);
@@ -335,26 +303,32 @@ h1:before {
  border-radius: 6px/18px 0;
  position: absolute;
  top: -13px;
- left: 70px;
-/*
-    
- -webkit-transform: rotate(-2deg);
- -moz-transform: rotate(-2deg);
- -o-transform: rotate(-2deg);
- -ms-transform: rotate(-2deg);
- transform: rotate(-2deg);
-*/
+ left: 75px;
+ /* マステの角度 */
+ transform: rotate(-3deg);
 }
-.note-yellow {
+.note-pink:before {
+ display: block;
+ content: "";
+ background: rgba(255, 95, 133, 0.8);
+ width: 130px;
+ height: 28px;
+ box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+ border-radius: 6px/18px 0;
+ position: absolute;
+ top: -13px;
+ left: 75px;
+/* マステの角度 */
+ transform: rotate(3deg);
+}
+.note-text {
     font-family: 'Yusei Magic', sans-serif;
-    
-/*
- -webkit-transform: rotate(2deg);
- -moz-transform: rotate(2deg);
- -o-transform: rotate(2deg);
- -ms-transform: rotate(2deg);
- transform: rotate(2deg);
-*/
+    font-size: 25px;
+    vertical-align: middle;
+}
+.note-text-last {
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 18px;
 }
 
 
