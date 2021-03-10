@@ -3,10 +3,12 @@
     margin: 0;
 }
 
+/*
 @font-face {
     font-family: 'nav';
     src: url(fonts/Corporate-Logo-Rounded.ttf);
 }
+*/
 
 wrappeer {
     width: 1913px;
@@ -45,7 +47,8 @@ nav {
 nav li {
     list-style-type: none;
     float: left;
-    font-family: nav;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: 600;
 }
 
 nav a {
@@ -352,5 +355,8 @@ h1:before {
     font-size: 20px;
 }
 
+.game-area{
+    text-align: center;
+}
 
 
