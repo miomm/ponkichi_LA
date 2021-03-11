@@ -12,6 +12,12 @@
     <!--  フォント  -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;700;800&family=Yusei+Magic&display=swap" rel="stylesheet">
+    <!--  slickのCSS  -->
+    <link rel="stylesheet" href="slick.css">
+    <link rel="stylesheet" href="slick-theme.css">
+    <!--  jQuery読み込み   -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
 
 </head>
 
@@ -161,9 +167,39 @@
             <div class="wave"><img src="img/wave-goods.png" alt=""></div>
         </section>
         <section id="line">
-           <h2><img src="img/line-title.png" alt=""></h2>
-            
+            <h2><img src="img/line-title.png" alt=""></h2>
+            <div class="slick">
+                <img src="img/stmp01.png" alt="" width="240">
+                <img src="img/stmp02.png" alt="" width="240">
+                <img src="img/stmp03.png" alt="" width="240">
+                <img src="img/stmp04.png" alt="" width="240">
+                <img src="img/stmp05.png" alt="" width="240">
+                <img src="img/stmp06.png" alt="" width="240">
+                <img src="img/stmp07.png" alt="" width="240">
+                <img src="img/stmp08.png" alt="" width="240">
+                <img src="img/stmp09.png" alt="" width="240">
+                <img src="img/stmp10.png" alt="" width="240">
+                <img src="img/stmp11.png" alt="" width="240">
+
+            </div>
         </section>
     </wrappeer>
 
+    <!--slick-->
+    <script>
+        $('.slick').slick({
+            autoplay: true,
+            autoplaySpeed: 1000,
+            dots: true,
+            arrows: true,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            responsive: [{
+                breakpoint: 479,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }]
+        });
+    </script>
 </body></html>
