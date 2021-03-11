@@ -538,7 +538,7 @@ a.btn-custom01:hover:before {
 #goods .wave{
     position: absolute;
     bottom: -2%;
-    left: 52%;
+    left: 30%;
     transform: translateX(-40%);
 }
 

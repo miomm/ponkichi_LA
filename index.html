@@ -16,8 +16,25 @@
     <link rel="stylesheet" href="slick.css">
     <link rel="stylesheet" href="slick-theme.css">
     <!--  jQuery読み込み   -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+<!--    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>-->
     <script type="text/javascript" src="js/slick.min.js"></script>
+    <!--  nav用jQuery読み込みここから  -->
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('a[href^=#]').click(function() {
+                var speed = 500;
+                var href = $(this).attr("href");
+                var target = $(href == "#" || href == "" ? 'html' : href);
+                var position = target.offset().top;
+                $("html, body").animate({
+                    scrollTop: position
+                }, speed, "swing");
+                return false;
+            });
+        });
+    </script>
+<!--  ここまで  -->
 
 </head>
 
@@ -28,11 +45,11 @@
                 <img src="img/navLogo.png" alt="">
                 <nav>
                     <ul>
-                        <li><a href="">About</a></li>
-                        <li><a href="">世の声</a></li>
-                        <li><a href="">ゲーム</a></li>
-                        <li><a href="">グッズ</a></li>
-                        <li><a href="">すたんぷ</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#voice">世の声</a></li>
+                        <li><a href="#game">ゲーム</a></li>
+                        <li><a href="#goods">グッズ</a></li>
+                        <li><a href="#line">すたんぷ</a></li>
                     </ul>
                 </nav>
             </div>
@@ -51,7 +68,7 @@
         </section>
         <div class="crowd-left"><img src="img/crowd-l.PNG" alt=""></div>
         <section id="about">
-           
+
             <div class="about-content">
                 <h5>About</h5>
                 <div class="aboutbox01">
@@ -220,8 +237,5 @@
                 }
             }]
         });
-
     </script>
-</body>
-
-</html>
+</body></html>
