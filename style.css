@@ -135,11 +135,24 @@ nav a:hover {
     background: #FFEC60;
     position: relative;
     overflow: hidden;
+    z-index: 1;
     }
 
 /*雲*/
 .clowd-left{
-    background: #c99f00;
+    position: absolute;
+    top: 0px;
+    left: -60px;
+    z-index: -1;
+}
+.clowd-right{
+   position: absolute;
+    bottom: 600px;
+    right: -60px;
+    z-index: -1; 
+}
+.clowd-right img{
+    width: 300px;;
 }
 
 .about-content{
@@ -187,6 +200,7 @@ h1:before {
 }
 /*ぽんきちとは*/
 .aboutbox01{
+    
    padding: 2em 4em;
     margin: 5em 0;
     font-weight: bold;
@@ -271,6 +285,26 @@ h1:before {
     background: #fef7a7;
     overflow: hidden;
    }
+/*おでんgif*/
+.oden{
+    position: absolute;
+    top:  1800px;
+    left: -40px;
+    z-index: 1; 
+}
+.oden img{
+    width: 300px;
+}
+/*宇宙飛行士*/
+.utyuu{
+    position: absolute;
+    top:  2050px;
+    right: -40px;
+    z-index: 1; 
+}
+.utyuu img{
+    width: 300px;
+}
 /*世の声ボックスエリア*/
 .voice-box{
     display: flex;
@@ -398,6 +432,14 @@ h1:before {
     max-width: 1400spx;
     justify-content: center;
 }
+/*pongif*/
+.ponpon{
+    position: absolute;
+    top:  1800px;
+    left: -40px;
+    z-index: 1; 
+}
+
 .left{
     width: 500px;
     margin: 20px 20px 40px 20px;

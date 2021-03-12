@@ -16,9 +16,9 @@
     <link rel="stylesheet" href="slick.css">
     <link rel="stylesheet" href="slick-theme.css">
     <!--  jQuery読み込み   -->
-     <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="js/slick.min.js"></script>
-   
+
 </head>
 
 <body>
@@ -50,7 +50,6 @@
 
         </section>
         <section id="about">
-           <div class="clowd-left"><img src="img/clowd-l.PNG" alt=""></div>
             <div class="about-content">
                 <h5>About</h5>
                 <div class="aboutbox01">
@@ -72,14 +71,16 @@
                 </div>
                 <div class="wave"><img src="img/wave-about.png" alt=""></div>
             </div>
+            <div class="clowd-left"><img src="img/clowd-l.PNG" alt=""></div>
+            <div class="clowd-right"><img src="img/clowd-r.PNG" alt=""></div>
         </section>
         <section id="voice">
             <h1>世の声</h1>
             <div class="voice-box">
                 <div class="note-blue">
                     <div class="note-text">
-                        Q　絵本に出てくる<br>あのキャラに似てる<br><br>
-                        A似てません。
+                        Q 絵本に出てくる<br>あのキャラに似てる<br><br>
+                        A 似てません。
                     </div>
                 </div>
                 <div class="note-pink">
@@ -102,7 +103,7 @@
                 </div>
                 <div class="note-blue">
                     <div class="note-text">
-                        Q　ぽんきち、ウミブドウって何？<br><br>
+                        Q　ぽんきち、<br>ウミブドウって何？<br><br>
                         A　思い出の味。
                     </div>
                 </div>
@@ -114,6 +115,8 @@
                 </div>
                 <div class="wave"><img src="img/wave-voice.png" alt=""></div>
             </div>
+            <div class="oden"><img src="img/oden.gif" alt=""></div>
+            <div class="utyuu"><img src="img/utyuu.PNG" alt=""></div>
         </section>
         <section id="game">
             <h1>ぽんきちたたきゲーム</h1>
@@ -166,6 +169,7 @@
                 </a>
             </div>
             <div class="wave"><img src="img/wave-goods.png" alt=""></div>
+            <div class="ponpon"><img src="img/ponmimiyellow.gif" alt=""></div>
         </section>
         <section id="line">
             <h2><img src="img/line-title.png" alt=""></h2>
@@ -206,22 +210,22 @@
     <!--slick-->
     <script>
         $(function() {
-        $('.slick').slick({
-            autoplay: true,
-            autoplaySpeed: 1000,
-            dots: true,
-            arrows: true,
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            responsive: [{
-                breakpoint: 479,
-                settings: {
-                    slidesToShow: 1,
-                }
-            }]
-        });
-    
-        
+            $('.slick').slick({
+                autoplay: true,
+                autoplaySpeed: 1000,
+                dots: true,
+                arrows: true,
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                responsive: [{
+                    breakpoint: 479,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                }]
+            });
+
+
             $('a[href^=#]').click(function() {
                 var speed = 500;
                 var href = $(this).attr("href");
@@ -231,6 +235,11 @@
                     scrollTop: position
                 }, speed, "swing");
                 return false;
+            });
+
+            // Nav Toggle Button
+            $('#nav-toggle, #global-nav ul li a').click(function() {
+                $header.toggleClass('open');
             });
         });
     </script>
