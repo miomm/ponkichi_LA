@@ -16,30 +16,13 @@
     <link rel="stylesheet" href="slick.css">
     <link rel="stylesheet" href="slick-theme.css">
     <!--  jQuery読み込み   -->
-<!--    <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>-->
+     <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="js/slick.min.js"></script>
-    <!--  nav用jQuery読み込みここから  -->
-    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
-    <script type="text/javascript">
-        $(function() {
-            $('a[href^=#]').click(function() {
-                var speed = 500;
-                var href = $(this).attr("href");
-                var target = $(href == "#" || href == "" ? 'html' : href);
-                var position = target.offset().top;
-                $("html, body").animate({
-                    scrollTop: position
-                }, speed, "swing");
-                return false;
-            });
-        });
-    </script>
-<!--  ここまで  -->
-
+   
 </head>
 
 <body>
-    <wrappeer>
+    <div class="wrapper">
         <section id="top">
             <div class="head">
                 <img src="img/navLogo.png" alt="">
@@ -66,9 +49,8 @@
             </div>
 
         </section>
-        <div class="crowd-left"><img src="img/crowd-l.PNG" alt=""></div>
         <section id="about">
-
+           <div class="clowd-left"><img src="img/clowd-l.PNG" alt=""></div>
             <div class="about-content">
                 <h5>About</h5>
                 <div class="aboutbox01">
@@ -219,10 +201,11 @@
             </div>
             <h5>©️モロヘイヤ Mio Matsui</h5>
         </footer>
-    </wrappeer>
+    </div>
 
     <!--slick-->
     <script>
+        $(function() {
         $('.slick').slick({
             autoplay: true,
             autoplaySpeed: 1000,
@@ -236,6 +219,19 @@
                     slidesToShow: 1,
                 }
             }]
+        });
+    
+        
+            $('a[href^=#]').click(function() {
+                var speed = 500;
+                var href = $(this).attr("href");
+                var target = $(href == "#" || href == "" ? 'html' : href);
+                var position = target.offset().top;
+                $("html, body").animate({
+                    scrollTop: position
+                }, speed, "swing");
+                return false;
+            });
         });
     </script>
 </body></html>

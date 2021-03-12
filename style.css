@@ -10,7 +10,7 @@
 }
 */
 
-wrappeer {
+wrapper {
     width: 1913px;
     height: auto;
     overflow: hidden;
@@ -136,12 +136,12 @@ nav a:hover {
     position: relative;
     overflow: hidden;
     }
-/*雲の画像*/
-.crowd-left{
-    position: absolute;
-    left: -50px;
-    z-index: 5;
+
+/*雲*/
+.clowd-left{
+    background: #c99f00;
 }
+
 .about-content{
     margin: 0 auto;
     width: 800px;
