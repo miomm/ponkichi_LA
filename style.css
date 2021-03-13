@@ -766,7 +766,9 @@ a.btn-custom02:hover:before {
     /*  影Afterサイズ  */
     box-shadow: 0 0.2rem 0 0 rgba(0, 0, 0, 0.2);
 }
-
+#smh{
+    display: none;
+}
 /*ボタン終わり*/
 /*フッター*/
 footer {
@@ -1216,4 +1218,72 @@ footer h5 {
         padding-top: 140px;
     }
 
+/*切り替え波*/
+#goods .wave {
+    bottom: -1%;
+}
+    #goods .wave img{
+        width: 600px;
+    }
+/*ラインスタンプセクション*/
+#line {
+    height: 450px;
+}
 
+#line h2 {
+    padding:20px;
+}
+
+h2 img {
+    width: 300px;
+}
+
+/*スリック*/
+.slick {
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+h3 {
+    font-size: 20px;
+}
+    
+.btn-area02{
+        display: none;
+    }
+#smh{
+        display: block;
+    }
+    
+/*フッター*/
+footer {
+    height: 250px;
+}
+
+footer h4 {
+    font-size: 20px;
+    padding-top: 30px;
+}
+
+.share {
+    width: 350px;
+    padding-top: 30px;
+}
+
+.twitter img {
+    width: 100px;
+}
+
+.pon img {
+    width: 100px;;
+}
+
+.fb img {
+    width: 100px;
+}
+
+footer h5 {
+    padding-top: 10px;
+    font-size: 14px;
+
+}
