@@ -8,10 +8,24 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <!--  ファビコン  -->
-    <link rel="shortcut icon" href="img/01.PNG">
+    <link rel="shortcut icon" href="img/pon_favi.PNG">
     <!--  フォント  -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;700;800&family=Yusei+Magic&display=swap" rel="stylesheet">
+    <!--   TwitterOGP     -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="" />
+    <meta name="twitter:url" content="https://ponkichi.info/" />
+    <meta name="twitter:title" content="ぽんきちわーるど" />
+    <meta name="twitter:description" content="ミステリアスなキャラクター「ぽんきち」、あなたもきっと好きになる。ぽんきち公式サイト" />
+    <meta name="twitter:image" content="https://ponkichi.info/img/site-img.PNG" />
+    <!--  OGP  -->
+    <meta property="og:url" content="ponkichi.info" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="ぽんきちわーるど" />
+    <meta property="og:description" content="ミステリアスなキャラクター「ぽんきち」、あなたもきっと好きになる。ぽんきち公式サイト" />
+    <meta property="og:site_name" content="ぽんきちわーるど" />
+    <meta property="og:image" content="https://ponkichi.info/img/site-img.PNG" />
     <!--  slickのCSS  -->
     <link rel="stylesheet" href="slick.css">
     <link rel="stylesheet" href="slick-theme.css">
@@ -123,7 +137,8 @@
             <h2>音が出るから注意してね！読み込みには2~3分かかるよ。<br>PCでのみオンラインランキング対応してるよ♪名前はアルファベットで入れてね</h2>
             <h3>ページをスクロールしたいときは、ゲーム画面の外にカーソルを持っていってください。</h3>
             <div class="sumaho-game">
-            <h5>音が出るよ。読み込みには2~3分かかります。<br>ランキング登録はPCのみ対応です。<br>ページをスクロールしたいときは、<br>ゲーム画面以外をスワイプしてください。</h5></div>
+                <h5>音が出るよ。読み込みには2~3分かかります。<br>ランキング登録はPCのみ対応です。<br>ページをスクロールしたいときは、<br>ゲーム画面以外をスワイプしてください。</h5>
+            </div>
             <div class="game-area">
                 <iframe width="960" height="600" src="ponmoguraBuild/index.html" frameborder="0" allowfullscreen></iframe>
             </div>
@@ -197,7 +212,7 @@
                     <i class="fas fa-angle-right fa-position-right"></i>
                 </a>
             </div>
-<!--  スマホ用のリンクボタン  -->
+            <!--  スマホ用のリンクボタン  -->
             <div class="btn-area02" id="smh">
                 <a href="https://line.me/R/shop/sticker/author/81248" target="_blank" class="linebtn btn-custom02">
                     <span class="btn-custom02-front">詳しくみる</span>
@@ -208,7 +223,7 @@
         <footer>
             <h4>\ シェアしてぽん！ /</h4>
             <div class="share">
-                <div class="twitter"><a href="http://twitter.com/share?url=ponkichi.info&text=この世界にぽんきちを広める！ぽんきちサイト→&related=m6_iw&hashtags=ぽんきち" target="_blank"><img src="img/twitterbutton.PNG" alt="" width="200"></a></div>
+                <div class="twitter"><a href="http://twitter.com/share?url=https://ponkichi.info&text=この世界にぽんきちを広める！ぽんきちサイト&hashtags=ぽんきち" target="_blank"><img src="img/twitterbutton.PNG" alt="" width="200"></a></div>
                 <div class="pon"><img src="img/ponshare.gif" alt="" width="200"></div>
                 <div class="fb"><a href="http://www.facebook.com/share.php?u=ponkichi.info" rel="nofollow" target="_blank"><img src="img/fbbutton.PNG" alt="" width="200"></a></div>
             </div>
@@ -252,5 +267,8 @@
                 $header.toggleClass('open');
             });
         });
+
     </script>
-</body></html>
+</body>
+
+</html>

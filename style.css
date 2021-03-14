@@ -359,7 +359,7 @@ h1:before {
     vertical-align: top;
     display: inline-block;
     font-family: Englebert, Arial;
-    color: #4b453c;
+    color: #000;
     background: #fff;
     line-height: 34px;
     text-align: center;
@@ -1162,6 +1162,7 @@ footer h5 {
 
 .gds-img img {
     width: 300px;
+    margin-left: 10px;
 }
 
 #goods p {
@@ -1169,16 +1170,16 @@ footer h5 {
     text-align: left;
     margin-top: 10px;
     width: 300px;
+    margin-right: 0px;
+    margin-left: 0px;
 }
 
 .left p {
-    margin-right: 0px;
     height: 30px;
 }
 
 
 .right p {
-    margin-left: 0px;
     height: 30px;
 
 }
