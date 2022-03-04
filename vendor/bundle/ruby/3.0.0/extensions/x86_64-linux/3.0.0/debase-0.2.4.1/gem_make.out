@@ -1,0 +1,22 @@
+current directory: /home/ec2-user/environment/PonwebFile/vendor/bundle/ruby/3.0.0/gems/debase-0.2.4.1/ext/attach
+/home/ec2-user/.rvm/rubies/ruby-3.0.0/bin/ruby -I /home/ec2-user/.rvm/rubies/ruby-3.0.0/lib/ruby/3.0.0 -r ./siteconf20220304-4219-90ikyy.rb extconf.rb
+checking for vm_core.h... yes
+checking for iseq.h... yes
+checking for version.h... yes
+checking for vm_core.h... yes
+checking for vm_insnhelper.h... yes
+checking for vm_core.h... yes
+checking for method.h... yes
+creating Makefile
+
+current directory: /home/ec2-user/environment/PonwebFile/vendor/bundle/ruby/3.0.0/gems/debase-0.2.4.1/ext/attach
+make "DESTDIR=" clean
+
+current directory: /home/ec2-user/environment/PonwebFile/vendor/bundle/ruby/3.0.0/gems/debase-0.2.4.1/ext/attach
+make "DESTDIR="
+compiling attach.c
+linking shared-object attach.so
+
+current directory: /home/ec2-user/environment/PonwebFile/vendor/bundle/ruby/3.0.0/gems/debase-0.2.4.1/ext/attach
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 attach.so ./.gem.20220304-4219-diqyh

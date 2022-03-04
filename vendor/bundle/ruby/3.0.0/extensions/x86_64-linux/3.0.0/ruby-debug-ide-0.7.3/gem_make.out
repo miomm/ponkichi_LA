@@ -1,0 +1,7 @@
+current directory: /home/ec2-user/environment/PonwebFile/vendor/bundle/ruby/3.0.0/gems/ruby-debug-ide-0.7.3/ext
+/home/ec2-user/.rvm/rubies/ruby-3.0.0/bin/ruby mkrf_conf.rb
+Installing base gem
+Building native extensions. This could take a while...
+
+current directory: /home/ec2-user/environment/PonwebFile/vendor/bundle/ruby/3.0.0/gems/ruby-debug-ide-0.7.3/ext
+/home/ec2-user/.rvm/rubies/ruby-3.0.0/bin/ruby -I/home/ec2-user/.rvm/rubies/ruby-3.0.0/lib/ruby/3.0.0 -rrubygems /home/ec2-user/environment/PonwebFile/vendor/bundle/ruby/3.0.0/gems/rake-13.0.6/exe/rake RUBYARCHDIR\=/home/ec2-user/environment/PonwebFile/vendor/bundle/ruby/3.0.0/extensions/x86_64-linux/3.0.0/ruby-debug-ide-0.7.3 RUBYLIBDIR\=/home/ec2-user/environment/PonwebFile/vendor/bundle/ruby/3.0.0/extensions/x86_64-linux/3.0.0/ruby-debug-ide-0.7.3
