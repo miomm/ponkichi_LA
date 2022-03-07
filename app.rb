@@ -6,10 +6,14 @@ require 'sinatra/reloader' if development?
 #セッション機能を使えるようにする
 enable :sessions
 
-#get '/' do
-#    erb :index
-#end
-
 get '/' do
+    erb :index
+end
+
+get '/shrine' do
     erb :shrine
+end
+
+get '/fanclub' do
+    erb :fanclub
 end
