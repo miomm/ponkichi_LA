@@ -6,6 +6,7 @@ gem 'sinatra-contrib', '~> 2.1'
 gem 'webrick', '~> 1.7'
 gem 'sinatra-activerecord', '~> 2.0'
 gem 'activerecord', '~> 6.1'
+gem "bcrypt", "~> 3.1", ">= 3.1.11"
 gem 'pg', '~> 1.2'
 gem 'rake', '~> 13.0'
 
