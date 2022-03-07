@@ -2,7 +2,7 @@ require 'bundler/setup'
 Bundler.require
 require 'sinatra/reloader' if development?
 #app.rbでActiveRecordを使用するためにmodels.rbを読み込む
-#require './models'
+require './models'
 #セッション機能を使えるようにする
 enable :sessions
 
