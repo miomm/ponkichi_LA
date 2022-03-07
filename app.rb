@@ -22,6 +22,14 @@ get '/signin' do
     erb :signin
 end
 
+post '/signin' do
+    user = User.find_by(email: params[:email])
+    if user && user.authenticate(params[:password])
+        session[:user] = user.id
+    end
+    redirect '/fanclub'
+end
+
 get '/signup' do
     erb :signup
 end

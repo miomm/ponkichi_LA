@@ -28,6 +28,8 @@
     </head>
     <body>
         ファンクラブ
-        <a href="/signin">ログイン</a>
+        <% if !current_user.nil? %>
+        こんにちは、<%= current_user.email %>さん
+        <% end %>
     </body>
 </html>
