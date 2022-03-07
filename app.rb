@@ -21,3 +21,25 @@ end
 get '/signin' do
     erb :signin
 end
+
+get '/signup' do
+    erb :signup
+end
+
+post '/signup' do
+    user = User.create(
+        email: params[:email],
+        password: params[:password],
+        password_confirmation: params[:password_confirmation]
+    )
+    if user.persisted?
+        session[:user] = user.id
+    end
+    redirect '/fanclub'
+end
+
+helpers do
+    def current_user
+        User.find_by(id: session[:user])
+    end
+end
