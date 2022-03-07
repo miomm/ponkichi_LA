@@ -127,6 +127,24 @@ nav a:hover {
     left: 50%;
     transform: translateX(-50%);
 }
+.fanclub-banner {
+    position: absolute;
+    bottom: 20%;
+    left: 80%;
+}
+
+.fanclub-banner img {
+    width: 80%;
+}
+.shrine-banner {
+    position: absolute;
+    bottom: 20%;
+    right: 80%;
+}
+
+.shrine-banner img {
+    width: 80%;
+}
 
 /*Aboutエリア*/
 #about {
