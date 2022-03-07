@@ -35,6 +35,8 @@ get '/signup' do
 end
 
 post '/signup' do
+    p params[:email]
+    p params[:password]
     user = User.create(
         email: params[:email],
         password: params[:password],
