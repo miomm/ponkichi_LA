@@ -53,3 +53,9 @@ helpers do
         User.find_by(id: session[:user])
     end
 end
+
+before '/fanclub' do
+    if current_user.nil?
+        redirect '/signin'
+    end
+end
