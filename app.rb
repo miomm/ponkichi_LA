@@ -7,6 +7,7 @@ require './models'
 enable :sessions
 require 'json'
 require 'net/http'
+require 'date'
 
 get '/' do
     erb :index
@@ -30,10 +31,12 @@ get '/shrine' do
      count.number += number.to_i
      count.save
     #占い
-    uri = URI("http://api.jugemkey.jp/api/horoscope/free/2022/03/09")
+    today = DateTime.now.new_offset("+09:00").strftime("%Y/%m/%d")
+    seiza = "牡牛座"
+    uri = URI("http://api.jugemkey.jp/api/horoscope/free/" + today)
     res = Net::HTTP.get_response(uri)
     json = JSON.parse(res.body)
-    @uranai = json['horoscope']['2022/03/09'][1]['content']
+    @uranai = json['horoscope'][today].find{|u| u['sign'] == seiza}['content']
     erb :shrine
 end
 
