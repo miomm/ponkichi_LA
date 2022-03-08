@@ -29,7 +29,8 @@
     <body>
         ファンクラブ<br>
         <% if !current_user.nil? %>
-        こんにちは、<%= current_user.email %>さん
+            こんにちは、<%= current_user.email %>さん
+            <a href="/signout">ログアウト</a>
         <% end %>
     </body>
 </html>

@@ -59,3 +59,8 @@ before '/fanclub' do
         redirect '/signin'
     end
 end
+
+get '/signout' do
+    session[:user] = nil
+    redirect '/signin'
+end
