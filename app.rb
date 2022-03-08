@@ -10,18 +10,24 @@ get '/' do
     erb :index
 end
 
+before '/shrine' do
+  if Coin.all.size == 0
+    Coin.create(number: 0)
+  end
+end
+
 get '/shrine' do
-    # @number = Saisen.first.number
+    @number = Coin.first.number
     erb :shrine
 end
 
 
-# post '/plus' do
-#     saisen = Saisen.first
-#     saisen.number = saisen.number + 1
-#     saisen.save
-#     redirect '/shrine'
-# end
+post '/plus' do
+     coin = Coin.first
+     coin.number += 1
+     coin.save
+     redirect '/shrine'
+ end
 
 get '/fanclub' do
     erb :fanclub
