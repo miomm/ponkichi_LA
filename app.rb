@@ -5,6 +5,8 @@ require 'sinatra/reloader' if development?
 require './models'
 #セッション機能を使えるようにする
 enable :sessions
+require 'json'
+require 'net/http'
 
 get '/' do
     erb :index
@@ -28,7 +30,10 @@ get '/shrine' do
      count.number += number.to_i
      count.save
     #占い
-    #uri = URI("")
+    uri = URI("http://api.jugemkey.jp/api/horoscope/free/2022/03/09")
+    res = Net::HTTP.get_response(uri)
+    json = JSON.parse(res.body)
+    @uranai = json['horoscope']['2022/03/09'][1]['content']
     erb :shrine
 end
 
