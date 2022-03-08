@@ -21,10 +21,14 @@ end
 
 get '/shrine' do
     @number = Coin.first.number
+    #アクセスカウンター
     @counter = Count.first.number
+    number = params[:number] || 1
     count = Count.first
-     count.number += 1
+     count.number += number.to_i
      count.save
+    #占い
+    #uri = URI("")
     erb :shrine
 end
 
@@ -32,7 +36,7 @@ post '/plus' do
      coin = Coin.first
      coin.number += 1
      coin.save
-     redirect '/shrine'
+     redirect '/shrine?number=0'
  end
  
 get '/fanclub' do
