@@ -11,8 +11,17 @@ get '/' do
 end
 
 get '/shrine' do
+    # @number = Saisen.first.number
     erb :shrine
 end
+
+
+# post '/plus' do
+#     saisen = Saisen.first
+#     saisen.number = saisen.number + 1
+#     saisen.save
+#     redirect '/shrine'
+# end
 
 get '/fanclub' do
     erb :fanclub
