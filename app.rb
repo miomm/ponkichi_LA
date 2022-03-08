@@ -14,13 +14,19 @@ before '/shrine' do
   if Coin.all.size == 0
     Coin.create(number: 0)
   end
+  if Count.all.size == 0
+    Count.create(number: 0)
+  end
 end
 
 get '/shrine' do
     @number = Coin.first.number
+    @counter = Count.first.number
+    count = Count.first
+     count.number += 1
+     count.save
     erb :shrine
 end
-
 
 post '/plus' do
      coin = Coin.first
@@ -28,7 +34,7 @@ post '/plus' do
      coin.save
      redirect '/shrine'
  end
-
+ 
 get '/fanclub' do
     erb :fanclub
 end

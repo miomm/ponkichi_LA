@@ -16,3 +16,7 @@ end
 class Coin < ActiveRecord::Base
     
 end
+
+class Count < ActiveRecord::Base
+    
+end

@@ -31,9 +31,10 @@
             <div class="head">
                <img src="img02/shrine-logo.png" alt="">
             </div>
+            あなたは<%= @counter %>人目の訪問者です<br>
             お賽銭
             <br>
-            <h1><%= @number %></h1>
+            <h1><%= @number %>円</h1>
             <form action="/plus" method="POST">
                 <input type="submit" value="ここをクリック">
             </form>
