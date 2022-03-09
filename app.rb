@@ -32,13 +32,24 @@ get '/shrine' do
      count.save
     #占い
     today = DateTime.now.new_offset("+09:00").strftime("%Y/%m/%d")
-    seiza = "牡牛座"
-    uri = URI("http://api.jugemkey.jp/api/horoscope/free/" + today)
-    res = Net::HTTP.get_response(uri)
-    json = JSON.parse(res.body)
-    @uranai = json['horoscope'][today].find{|u| u['sign'] == seiza}['content']
+    seiza = params[:star]
+    @name = params[:name]
+    puts "hoge"
+    puts seiza
+    if seiza == ""
+    else
+        uri = URI("http://api.jugemkey.jp/api/horoscope/free/" + today)
+        res = Net::HTTP.get_response(uri)
+        json = JSON.parse(res.body)
+        @uranai = json['horoscope'][today].find{|u| u['sign'] == seiza}['content']
+    end
     erb :shrine
 end
+
+#post '/shrine' do
+#
+#    redirect '/shrine'
+#end
 
 post '/plus' do
      coin = Coin.first
