@@ -788,6 +788,25 @@ a.btn-custom02:hover:before {
     display: none;
 }
 /*ボタン終わり*/
+
+/*コンテンツ一覧エリア*/
+#maps {
+    height: 500px;
+    background: #fef7a7;
+    position: relative;
+}
+
+#maps h1{
+    padding-top: 50px;
+}
+
+.contents-map {
+    margin: 0 auto;
+    width: 800px;
+    text-align: center;
+}
+
+    
 /*フッター*/
 footer {
     background: #000;
@@ -832,6 +851,8 @@ footer h5 {
     font-size: 20px;
 
 }
+
+
 
 /*すまーとほん*/
 @media screen and (max-width: 479px) {
@@ -1274,6 +1295,19 @@ h3 {
         display: block;
     }
     
+/*コンテンツエリア*/
+    #maps {
+        height: 300px;
+    }
+
+    .contents-map {
+        width: 380px;
+    }
+
+    #maps h1 {
+        font-size: 25px;
+        padding: 10px;
+    }
 /*フッター*/
 footer {
     height: 250px;
@@ -1304,5 +1338,4 @@ footer h4 {
 footer h5 {
     padding-top: 10px;
     font-size: 14px;
-
 }
