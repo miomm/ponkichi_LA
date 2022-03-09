@@ -35,10 +35,6 @@ get '/shrine' do
     today = DateTime.now.new_offset("+09:00").strftime("%Y/%m/%d")
     seiza = params[:star]
     @name = params[:name]
-    puts "piyo"
-    puts seiza.class
-    puts seiza
-    puts "hoge"
     if seiza.kind_of?(String)
         if seiza != "noselect"
             uri = URI("http://api.jugemkey.jp/api/horoscope/free/" + today)
