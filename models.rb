@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
         format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i }
     validates :password,
         length: { in: 5..10 }
+    has_many :blogs
 end
 
 class Coin < ActiveRecord::Base
@@ -19,4 +20,10 @@ end
 
 class Count < ActiveRecord::Base
     
+end
+
+class Blog < ActiveRecord::Base
+    belongs_to :user
+    validates :body_text,
+        length: { maximum: 300 }
 end

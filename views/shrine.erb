@@ -32,6 +32,13 @@
                <img src="img02/shrine-logo.png" alt="">
             </div>
             あなたは<%= @counter %>人目の訪問者です<br>
+            <% if @number < 150 %>
+                <img src="img02/2mvXUx41_400x400.jpg" alt="">
+            <% elsif @number < 1000 %>
+                <img src="img02/shrine-logo.png" alt="">
+            <% elsif @number < 1500 %>
+                <img src="img02/pika.gif" alt="">
+            <% end %>
             お賽銭
             <br>
             <h1><%= @number %>円</h1>
@@ -39,7 +46,7 @@
                 <input type="submit" value="ここをクリック">
             </form>
 
-            <form action="/shrine" method="get">
+            <form action="/shrine?number=0" method="get">
                 <p>
                     <input type="text" name="name" placeholder="なまえ" required>
                     <select name="star">
@@ -49,11 +56,29 @@
                         <option value="双子座">双子座</option>
                         <option value="蟹座">蟹座</option>
                         <option value="獅子座">獅子座</option>
+                        <option value="乙女座">乙女座</option>
+                        <option value="天秤座">天秤座</option>
+                        <option value="蠍座">蠍座</option>
+                        <option value="射手座">射手座</option>
+                        <option value="山羊座">山羊座</option>
+                        <option value="水瓶座">水瓶座</option>
+                        <option value="魚座">魚座</option>
                     </select>
                    <input type="submit" value="結果を見る">
                </p>
             </form>
-            <%= @uranai %>
+            <% if @uranai['ok'] == 1 %>
+                <p>
+                    <%= @uranai["data"]["content"]%>
+                    ラッキーアイテムは
+                    <%= @uranai["data"]["item"] %>
+                </p>
+            <% elsif @uranai['ok'] == 2 %>
+                <script>
+                    window.alert("<%= @uranai['message'] %>");
+                </script>
+            <% end %>
         </div>
+        <%= erb :'_footer' %>
     </body>
 </html>

@@ -2,10 +2,10 @@
 <html lang="ja">
      <head>
         <meta charset="UTF-8">
-        <title>ぽんきちファンクラブ</title>
+        <title>あざぎょう1000円ガチャ</title>
         <!--ビューポート-->
         <meta name="viewport" content="width=device-width,initial-scale=1">
-        <link rel="stylesheet" href="./shrine-style.css">
+        <link rel="stylesheet" href="/azagyo-style.css">
         <!--  ファビコン  -->
         <link rel="shortcut icon" href="img/pon_favi.PNG">
         <!--  フォント  -->
@@ -27,26 +27,23 @@
         <meta property="og:image" content="https://ponkichi.info/img/site-img.PNG" />
     </head>
     <body>
-        ファンクラブ<br>
-        <% if !current_user.nil? %>
-            こんにちは、<%= current_user.email %>さん
-            <a href="/signout">ログアウト</a>
-        <% end %>
-        
-        
-        <% @blogs.each do |blog| %>
-        <tr>
-            <td><%= blog.title %></td>
-            <td><%= blog.body_text %></td>
-        </tr>
-        <% end %>
-         <div>
-            <form action="/blogs" method="post">
-                <input type="text" name="title" placeholder="タイトル"><br>
-                <input type="text" name="body_text" placeholder="本文">
-                <input type="submit" value="投稿">
-            </form>
+        <h1>あざぎょう2000円ガチャ</h1>
+        <div class="btn-area">
+            <div class="btn">
+                <a href="/azagyo/result" class="btn btn--gatya btn--cubic">ガチャを回す</a>
+            </div>
         </div>
-        <%= erb :'_footer' %>
+        <% if @menu[:ok] == 1 %>
+        <div>
+            <% for r in @menu[:result] do %>
+                <%= "名前：" + r["name"].to_s %>
+                <%= "値段：" + r["price"].to_s %>
+            <% end %>
+            <%= "合計：" + @menu[:price].to_s %>
+        </div>
+        <% else %>
+        <% end %>
+        
+        <a href="https://azabu-gyoza-api.herokuapp.com/">麻布餃子API</a>
     </body>
 </html>
