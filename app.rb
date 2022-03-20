@@ -160,3 +160,10 @@ post '/blogs' do
     
     redirect '/fanclub'
 end
+
+get '/reset0427' do
+    Coin.delete_all
+    Count.delete_all
+    Blog.delete_all
+    redirect '/'
+end
