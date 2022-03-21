@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <link rel="stylesheet" href="/azagyo-style.css">
         <!--  ファビコン  -->
-        <link rel="shortcut icon" href="img/pon_favi.PNG">
+        <link rel="shortcut icon" href="img02/azagyo-favicon.png">
         <!--  フォント  -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;700;800&family=Yusei+Magic&display=swap" rel="stylesheet">
@@ -15,35 +15,44 @@
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="" />
         <meta name="twitter:url" content="https://ponkichi.info/" />
-        <meta name="twitter:title" content="ぽんきちわーるど" />
-        <meta name="twitter:description" content="ミステリアスなキャラクター「ぽんきち」、あなたもきっと好きになる。ぽんきち公式サイト" />
+        <meta name="twitter:title" content="あざぎょう2000円ガチャ" />
+        <meta name="twitter:description" content="麻布餃子のメニューから2000円以内でガチャを引けるサイト" />
         <meta name="twitter:image" content="https://ponkichi.info/img/site-img.PNG" />
         <!--  OGP  -->
         <meta property="og:url" content="ponkichi.info" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="ぽんきちわーるど" />
-        <meta property="og:description" content="ミステリアスなキャラクター「ぽんきち」、あなたもきっと好きになる。ぽんきち公式サイト" />
-        <meta property="og:site_name" content="ぽんきちわーるど" />
+        <meta property="og:title" content="あざぎょう2000円ガチャ" />
+        <meta property="og:description" content="麻布餃子のメニューから2000円以内でガチャを引けるサイト" />
+        <meta property="og:site_name" content="あざぎょう2000円ガチャ" />
         <meta property="og:image" content="https://ponkichi.info/img/site-img.PNG" />
     </head>
     <body>
-        <h1>あざぎょう2000円ガチャ</h1>
-        <div class="btn-area">
-            <div class="btn">
-                <a href="/azagyo/result" class="btn btn--gatya btn--cubic">ガチャを回す</a>
+        <div class="main">
+            <div class="main-content">
+                <div class="heading">
+                    <h1>あざぎょう2000円ガチャ</h1>
+                        <div class="btn-area">
+                            <div class="btn">
+                                <a href="/azagyo/result" class="btn btn--gatya btn--cubic">ガチャを回す</a>
+                            </div>
+                        </div>
+                </div>
+                    <div class="items">
+                        <% if @menu[:ok] == 1 %>
+                            <% for r in @menu[:result] do %>
+                                <h2><%= r["name"].to_s %></h2>
+                                <p><%= r["price"].to_s + "円" %></p>
+                            <% end %>
+                        <div class="summary">
+                            <h3><%= "合計：" + @menu[:price].to_s %></h3>
+                            <% else %>
+                            <% end %>
+                        </div>
+                    </div>
+                    <div class="footer">
+                    <a href="https://azabu-gyoza-api.herokuapp.com/">麻布餃子API</a>
+                </div>
             </div>
         </div>
-        <% if @menu[:ok] == 1 %>
-        <div>
-            <% for r in @menu[:result] do %>
-                <%= "名前：" + r["name"].to_s %>
-                <%= "値段：" + r["price"].to_s %>
-            <% end %>
-            <%= "合計：" + @menu[:price].to_s %>
-        </div>
-        <% else %>
-        <% end %>
-        
-        <a href="https://azabu-gyoza-api.herokuapp.com/">麻布餃子API</a>
     </body>
 </html>
