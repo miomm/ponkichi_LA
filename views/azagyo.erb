@@ -9,8 +9,9 @@
         <!--  ファビコン  -->
         <link rel="shortcut icon" href="img02/azagyo-favicon.png">
         <!--  フォント  -->
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;700;800&family=Yusei+Magic&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&display=swap" rel="stylesheet">
         <!--   TwitterOGP     -->
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="" />
@@ -27,29 +28,32 @@
         <meta property="og:image" content="https://ponkichi.info/img/site-img.PNG" />
     </head>
     <body>
-        <div class="main">
-            <div class="main-content">
+        <div class="main" style="height: auto">
+            <div class="main-container" style="height: auto">
                 <div class="heading">
-                    <h1>あざぎょう2000円ガチャ</h1>
-                        <div class="btn-area">
-                            <div class="btn">
-                                <a href="/azagyo/result" class="btn btn--gatya btn--cubic">ガチャを回す</a>
-                            </div>
-                        </div>
+                    <h1>あざぎょう</h1>
+                    <h1>2000円ガチャ</h1>
                 </div>
+                <div class="result-container">
                     <div class="items">
                         <% if @menu[:ok] == 1 %>
                             <% for r in @menu[:result] do %>
                                 <h2><%= r["name"].to_s %></h2>
                                 <p><%= r["price"].to_s + "円" %></p>
                             <% end %>
-                        <div class="summary">
-                            <h3><%= "合計：" + @menu[:price].to_s %></h3>
+                    </div>
+                    <div class="summary">
+                            <h3><%= "合計：" + @menu[:price].to_s + "円" %></h3>
                             <% else %>
                             <% end %>
-                        </div>
                     </div>
-                    <div class="footer">
+                </div>
+                <div class="btn-area">
+                    <div class="btn">
+                        <a href="/azagyo/result" class="btn btn--gatya btn--cubic">ガチャを回す</a>
+                    </div>
+                </div>
+                <div class="footer">
                     <a href="https://azabu-gyoza-api.herokuapp.com/">麻布餃子API</a>
                 </div>
             </div>
