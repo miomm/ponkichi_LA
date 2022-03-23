@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
         length: { maximum: 300 },
         format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i }
     validates :password,
-        length: { in: 5..10 }
+        length: { in: 5..20 }
     has_many :blogs
 end
 

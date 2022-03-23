@@ -1,0 +1,15 @@
+.bss-container {
+  width: 100%;
+  max-width: 550px;
+  padding: 15px;
+  margin: auto;
+}
+
+.scroll-container{
+  height: 500px;
+  overflow-y: scroll;
+}
+
+/*.footer-container{*/
+/*  max-width: 960px;*/
+/*}*/

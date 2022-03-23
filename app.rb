@@ -161,6 +161,11 @@ post '/blogs' do
     redirect '/fanclub'
 end
 
+post '/delete/:id' do
+    Blog.find(params[:id]).destroy
+    redirect '/fanclub'
+end
+
 get '/reset0427' do
     Coin.delete_all
     Count.delete_all

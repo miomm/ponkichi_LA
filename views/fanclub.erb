@@ -5,50 +5,104 @@
         <title>ぽんきちファンクラブ</title>
         <!--ビューポート-->
         <meta name="viewport" content="width=device-width,initial-scale=1">
-        <link rel="stylesheet" href="./shrine-style.css">
         <!--Boothtrap-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <!--  ファビコン  -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <!--CSS-->
+        <link rel="stylesheet" href="/fanclub-style.css">
+          <!--ファビコン  -->
         <link rel="shortcut icon" href="img/pon_favi.PNG">
-        <!--  フォント  -->
+          <!--フォント  -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;700;800&family=Yusei+Magic&display=swap" rel="stylesheet">
-        <!--   TwitterOGP     -->
+           <!--TwitterOGP     -->
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="" />
         <meta name="twitter:url" content="https://ponkichi.info/" />
         <meta name="twitter:title" content="ぽんきちわーるど" />
         <meta name="twitter:description" content="ミステリアスなキャラクター「ぽんきち」、あなたもきっと好きになる。ぽんきち公式サイト" />
         <meta name="twitter:image" content="https://ponkichi.info/img/site-img.PNG" />
-        <!--  OGP  -->
+          <!--OGP  -->
         <meta property="og:url" content="ponkichi.info" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="ぽんきちわーるど" />
         <meta property="og:description" content="ミステリアスなキャラクター「ぽんきち」、あなたもきっと好きになる。ぽんきち公式サイト" />
         <meta property="og:site_name" content="ぽんきちわーるど" />
         <meta property="og:image" content="https://ponkichi.info/img/site-img.PNG" />
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
     </head>
     <body>
-        ファンクラブ<br>
-        <% if !current_user.nil? %>
-            こんにちは、<%= current_user.email %>さん
-            <a href="/signout">ログアウト</a>
-        <% end %>
-        
-        
-        <% @blogs.each do |blog| %>
-        <tr>
-            <td><%= blog.title %></td>
-            <td><%= blog.body_text %></td>
-        </tr>
-        <% end %>
-         <div>
-            <form action="/blogs" method="post">
-                <input type="text" name="title" placeholder="タイトル"><br>
-                <input type="text" name="body_text" placeholder="本文">
-                <input type="submit" value="投稿">
-            </form>
+        <div class="container">
+            <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+              <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                <img class="bi me-2" width="40" height="40" src="/img02/pc_logo.png"></img>
+                <span class="fs-4">ぽんきちファンクラブ</span>
+              </a>
+                <% if !current_user.nil? %>
+                    <ul class="nav col-12 col-md-auto mb-2  justify-content-center mb-md-0">
+                    <li class="nav-link px-2 link-dark">こんにちは、<%= current_user.email %>さん</li>
+                    </ul>
+                <% end %>
+            <div class="col-md-2 text-end">
+                <a href="/signout">
+                    <button type="button" class="btn btn-outline-primary me-2">ログアウト</button>
+                </a>
+            </div>  
+            </header>
+            
+            <div class="bss-container">
+                <div>
+                    <p class="text-center">交流掲示板</p>
+                    <div class="bg-light p-3 mb-2 rounded">
+                        <form action="/blogs" method="post">
+                            <div class="form-group mb-1">
+                                <input type="text" name="title" class="form-control" placeholder="タイトル">
+                            </div>
+                            <div class="form-group">
+                                <textarea rows="3" name="body_text" class="form-control" placeholder="本文" required="required"></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-secondary mt-2">投稿する</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="scroll-container">
+                    <div>
+                        <% @blogs.each do |blog| %>
+                        <div class="card col-lg-9 mb-1 w-100">
+                            <div class="card-body p-2">
+                                <p>名無しのぽんきちさん</p>
+                                <p><%= blog.title %></p>
+                                <p><%= blog.body_text %></p>
+                                <div class="d-flex justify-content-end align-items-center mt-2">
+                                    <form action="/delete/<%= blog.id %>" method="post" class="align-items-center">
+                                        <input type="submit" value="削除" class="btn btn-outline-secondary btn-sm">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <% end %>
+                    </div>
+                </div>
+            </div>
         </div>
-        <%= erb :'_footer' %>
+        <div class="footer-container py-3 mx-auto">
+           <%= erb :'_footer' %> 
+        </div>
     </body>
 </html>

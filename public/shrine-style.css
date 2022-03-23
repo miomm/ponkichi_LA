@@ -1,7 +1,6 @@
 * {
     padding: 0;
     margin: 0;
-    text-align: center;
 }
 
 /*
@@ -11,10 +10,11 @@
 }
 */
 
-wrapper {
-    width: 1913px;
+.wrapper{
+    width: auto;
     height: auto;
     overflow: hidden;
+    text-align: center;
 }
 
 /*ヘッダー*/
@@ -34,8 +34,8 @@ wrapper {
 footer h5 {
     padding-top: 10px;
     font-size: 14px;
-
 }
+
 .uranai-content{
     margin:10px;
     padding:20px;
